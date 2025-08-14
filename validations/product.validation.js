@@ -1,8 +1,9 @@
 import { z } from 'zod'
 
 const productValidate = z.object({
-  name: z.string().max(30),
+  productName: z.string().max(30),
   description: z.string().min(10),
+  price: z.number().int(),
   stock: z.number().int().min(0),
   category: z.array(
     z.string()

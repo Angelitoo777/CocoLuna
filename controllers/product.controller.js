@@ -1,7 +1,9 @@
 import { elasticCLient } from '../db/elastic.db.js'
 import { clientRedis } from '../db/redis.db.js'
-import Product from '../models/products.model.js'
+import { Product } from '../models/products.model.js'
 import { productValidation, productParcialValidation } from '../validations/product.validation.js'
+import { validationOrder } from '../validations/order.validation.js'
+import { createPurchase } from '../services/buyProducts.services.js'
 
 export class ProductController {
   static async getProducts (req, res) {
@@ -53,12 +55,13 @@ export class ProductController {
       return res.status(400).json({ message: 'Error de validacion', error: validation.errors })
     }
 
-    const { name, description, stock, category, imageUrl } = validation.data
+    const { productName, description, price, stock, category, imageUrl } = validation.data
 
     try {
       const newProduct = new Product({
-        name,
+        productName,
         description,
+        price,
         stock,
         category,
         imageUrl
@@ -91,7 +94,7 @@ export class ProductController {
       return res.status(400).json({ message: 'Error de validacion', error: validation.errors })
     }
 
-    const { name, description, stock, category, imageUrl } = validation.data
+    const { productName, description, price, stock, category, imageUrl } = validation.data
 
     try {
       const findProduct = await Product.findById({ _id })
@@ -101,8 +104,9 @@ export class ProductController {
       }
 
       const updateProduct = await Product.findByIdAndUpdate(_id, {
-        name,
+        productName,
         description,
+        price,
         stock,
         category,
         imageUrl
@@ -160,19 +164,46 @@ export class ProductController {
     }
 
     try {
+      const cacheSearch = await clientRedis.get('products_search')
+
+      if (cacheSearch) {
+        return res.json(JSON.parse(cacheSearch))
+      }
+
       const search = await elasticCLient.search({
         index: 'products',
         query: {
           multi_match: {
             query,
-            fields: ['name', 'description', 'category']
+            fields: ['productName', 'description', 'category']
           }
         }
       })
 
       const products = search.hits.hits.map(hit => hit._source)
 
+      await clientRedis.setEx('products_search', 3600, JSON.stringify(products))
+
       return res.json(products)
+    } catch (error) {
+      return res.status(500).json({ message: 'Error interno del servidor' })
+    }
+  }
+
+  static async buyProduct (req, res) {
+    const validation = validationOrder(req.body)
+
+    if (!validation.success) {
+      return res.status(400).json({ message: 'Error de validacion', error: validation.errors })
+    }
+
+    const { userEmail, items } = validation.data
+
+    try {
+      const newOrder = await createPurchase(items, userEmail)
+
+      return res.json(`Tu orden se ha creado exitosamente en la brevedad posible se te enviara la factura a tu correo.
+        Tu numero de orden es: ${newOrder.transactionId}`)
     } catch (error) {
       return res.status(500).json({ message: 'Error interno del servidor' })
     }

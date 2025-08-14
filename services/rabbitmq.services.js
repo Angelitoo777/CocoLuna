@@ -31,3 +31,16 @@ export const publishMessage = async (queue, message) => {
     throw new Error(error)
   }
 }
+
+export const publishTopicMessage = async (exchange, routingKey, message) => {
+  try {
+    const channel = await ConnectRabbitMQ()
+
+    await channel.assertExchange(exchange, 'topic')
+
+    channel.publish(exchange, routingKey, Buffer.from(JSON.stringify(message)))
+    console.log(`[x] Mensaje publicado en el exchange ${exchange}`)
+  } catch (error) {
+    throw new Error(error)
+  }
+}
