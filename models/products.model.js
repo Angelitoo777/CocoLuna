@@ -3,13 +3,18 @@ import mongoose from 'mongoose'
 const { Schema } = mongoose
 
 const productsSchema = new Schema({
-  name: {
+  productName: {
     type: String,
     required: true
   },
   description: {
     type: String,
     required: true
+  },
+  price: {
+    type: Number,
+    required: true,
+    default: 0
   },
   stock: {
     type: Number,
@@ -28,6 +33,45 @@ const productsSchema = new Schema({
   timestamps: false
 })
 
-const Product = mongoose.model('Products', productsSchema)
+const orderSchema = new Schema({
+  userEmail: {
+    type: String,
+    required: true
+  },
+  items: [
+    {
+      productId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
+        required: true
+      },
+      productName: {
+        type: String,
+        required: true
+      },
+      quantity: {
+        type: Number,
+        required: true,
+        min: 1
+      },
+      price: {
+        type: Number,
+        required: true,
+        min: 0
+      }
+    }
+  ],
+  total: {
+    type: Number,
+    required: true,
+    min: 0
+  },
+  purchaseDate: {
+    type: Date,
+    default: Date.now()
+  }
+})
 
-export default Product
+export const Order = mongoose.model('Orders', orderSchema)
+
+export const Product = mongoose.model('Products', productsSchema)

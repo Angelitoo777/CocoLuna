@@ -9,12 +9,6 @@ import cookieParser from 'cookie-parser'
 const app = express()
 const PORT = process.env.PORT ?? 3000
 
-app.use(express.json())
-app.use(cookieParser())
-
-app.use('/auth', routesOfUser)
-app.use('/api', routesOfProducts)
-
 try {
   await sequelize.sync({ force: false })
   await connectMongoDB()
@@ -22,6 +16,12 @@ try {
 } catch (error) {
   throw new Error(error)
 }
+
+app.use(express.json())
+app.use(cookieParser())
+
+app.use('/auth', routesOfUser)
+app.use('/api', routesOfProducts)
 
 app.get('/', (req, res) => {
   res.send('Hola cocoluna')

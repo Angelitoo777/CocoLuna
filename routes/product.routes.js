@@ -10,5 +10,7 @@ routesOfProducts.get('/products/search', ProductController.searchProduct)
 routesOfProducts.get('/products/:_id', ProductController.getProductById)
 
 routesOfProducts.post('/products', authMiddleware, isAdmin, ProductController.createProduct)
+routesOfProducts.post('/products/buy', authMiddleware, ProductController.buyProduct)
+
 routesOfProducts.patch('/products/:_id', authMiddleware, isAdmin, ProductController.updateProduct)
 routesOfProducts.delete('/products/:_id', authMiddleware, isAdmin, ProductController.deleteProduct)
