@@ -50,7 +50,7 @@ CocoLuna es una API RESTful robusta y escalable diseñada para gestionar product
 
 ## 📁 Project Structure
 
-``sh
+```sh
 └── CocoLuna/
     ├── README.md
     ├── app.js
