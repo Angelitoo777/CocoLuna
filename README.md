@@ -10,7 +10,7 @@
 <p align="center">Construido con las siguientes tecnologías:</p>
 <p align="center">
 	<a href="https://skillicons.dev">
-		<img src="https://skillicons.dev/icons?i=express,md,redis,sequelize,nodejs">
+		<img src="https://skillicons.dev/icons?i=express,md,redis,sequelize,nodejs,mysql,rabbitmq,elasticsearch">
 	</a></p>
 <br>
 
