@@ -1,56 +1,63 @@
 <p align="center">
-    <img src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/100/external-markdown-a-lightweight-markup-language-with-plain-text-formatting-syntax-logo-duo-tal-revivo.png" align="center" width="30%">
+<img src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/100/external-markdown-a-lightweight-markup-language-with-plain-text-formatting-syntax-logo-duo-tal-revivo.png" align="center" width="30%">
 </p>
 <p align="center"><h1 align="center">COCOLUNA</h1></p>
 <p align="center">
-	<em><code>❯ Una API escalable para la gestión de productos y usuarios.</code></em>
+<em><code>❯ Una API escalable para la gestión de productos y usuarios.</code></em>
 </p>
 <p align="center">
-	</p>
+</p>
 <p align="center">Construido con las siguientes tecnologías:</p>
 <p align="center">
-	<a href="https://skillicons.dev">
-		<img src="https://skillicons.dev/icons?i=express,md,redis,sequelize,nodejs">
-	</a></p>
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=express,md,redis,sequelize,nodejs">
+</a></p>
 <br>
 
-## 🔗 Tabla de Contenidos
+🔗 Tabla de Contenidos
+📍 Visión General
 
-- [📍 Visión General](#-visión-general)
-- [👾 Características](#-características)
-- [📁 Estructura del Proyecto](#-estructura-del-proyecto)
-  - [📂 Índice del Proyecto](#-índice-del-proyecto)
-- [🚀 Empezando](#-empezando)
-  - [☑️ Prerrequisitos](#️-prerrequisitos)
-  - [⚙️ Instalación](#️-instalación)
-  - [🤖 Uso](#-uso)
-  - [🧪 Pruebas](#-pruebas)
-- [📌 Hoja de Ruta](#-hoja-de-ruta)
-- [🔰 Contribuciones](#-contribuciones)
-- [🎗 Licencia](#-licencia)
-- [🙌 Agradecimientos](#-agradecimientos)
+👾 Características
 
----
+📁 Estructura del Proyecto
 
-## 📍 Visión General
+📂 Índice del Proyecto
 
+🚀 Empezando
+
+☑️ Prerrequisitos
+
+⚙️ Instalación
+
+🤖 Uso
+
+🧪 Pruebas
+
+📌 Hoja de Ruta
+
+🔰 Contribuciones
+
+🎗 Licencia
+
+🙌 Agradecimientos
+
+📍 Visión General
 CocoLuna es una API RESTful robusta y escalable diseñada para gestionar productos, usuarios y procesos de compra. La arquitectura del proyecto está orientada a microservicios, utilizando un sistema de mensajería (RabbitMQ) para desacoplar procesos como la notificación por correo y la gestión de inventario, lo que garantiza una alta disponibilidad y un rendimiento óptimo.
 
----
+👾 Características
+Autenticación de Usuarios: Sistema de autenticación JWT para proteger las rutas y gestionar los permisos de administrador y usuario.
 
-## 👾 Características
+Gestión de Productos: Endpoints para crear, leer, actualizar y eliminar productos.
 
-* **Autenticación de Usuarios**: Sistema de autenticación JWT para proteger las rutas y gestionar los permisos de administrador y usuario.
-* **Gestión de Productos**: Endpoints para crear, leer, actualizar y eliminar productos.
-* **Gestión de Inventario**: Servicio de consumidor (consumer) que actualiza el stock de productos de manera asíncrona tras una compra.
-* **Notificaciones por Email**: Servicio de consumidor que envía notificaciones por correo electrónico a los usuarios.
-* **Múltiples Bases de Datos**: Integración con ElasticSearch, MongoDB, MySQL y Redis para diferentes tipos de datos (búsquedas, datos no estructurados, datos relacionales y caché).
+Gestión de Inventario: Servicio de consumidor (consumer) que actualiza el stock de productos de manera asíncrona tras una compra.
 
----
+Notificaciones por Email: Servicio de consumidor que envía notificaciones por correo electrónico a los usuarios.
 
-## 📁 Estructura del Proyecto
+Múltiples Bases de Datos: Integración con ElasticSearch, MongoDB, MySQL y Redis para diferentes tipos de datos (búsquedas, datos no estructurados, datos relacionales y caché).
 
-```sh
+📁 Estructura del Proyecto
+Bash
+
 └── CocoLuna/
     ├── README.md
     ├── app.js
@@ -233,7 +240,7 @@ Clona el repositorio:
 
 Bash
 
-git clone [https://github.com/Angelitoo777/CocoLuna](https://github.com/Angelitoo777/CocoLuna)
+git clone https://github.com/Angelitoo777/CocoLuna
 Navega al directorio del proyecto:
 
 Bash
@@ -283,7 +290,7 @@ Clona el Repositorio: Clona tu fork a tu máquina local.
 
 Bash
 
-git clone [https://github.com/Angelitoo777/CocoLuna](https://github.com/Angelitoo777/CocoLuna)
+git clone https://github.com/Angelitoo777/CocoLuna
 Crea una Nueva Rama: Trabaja siempre en una nueva rama con un nombre descriptivo.
 
 Bash
