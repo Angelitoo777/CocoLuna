@@ -67,39 +67,41 @@ CocoLuna es una API RESTful robusta y escalable diseñada para gestionar product
 ```
 📂 Índice del Proyecto
 <details open>
-<summary><b><code>COCOLUNA/</code></b></summary>
-<details> <summary><b>root</b></summary>
-<blockquote>
-<table>
-<tr>
-<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/app.js'>app.js</a></b></td>
-<td>Punto de entrada de la aplicación, configura Express y los middlewares globales.</td>
-</tr>
-<tr>
-<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/package-lock.json'>package-lock.json</a></b></td>
-<td>Define las dependencias exactas del proyecto.</td>
-</tr>
-<tr>
-<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/package.json'>package.json</a></b></td>
-<td>Configuración del proyecto, scripts, dependencias.</td>
-</tr>
-</table>
-</blockquote>
-</details>
-<details> <summary><b>middlewares</b></summary>
-<blockquote>
-<table>
-<tr>
-<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/middlewares/authMiddleware.js'>authMiddleware.js</a></b></td>
-<td>Middleware para verificar tokens de autenticación (JWT).</td>
-</tr>
-<tr>
-<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/middlewares/admin.middleware.js'>admin.middleware.js</a></b></td>
-<td>Middleware para restringir el acceso a rutas solo para administradores.</td>
-</tr>
-</table>
-</blockquote>
-</details>
+		<summary><b><code>COCOLUNA/</code></b></summary>
+		<details>
+				<summary><b>root</b></summary>
+				<blockquote>
+					<table>
+					<tr>
+						<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/app.js'>app.js</a></b></td>
+						<td>Punto de entrada de la aplicación, configura Express y los middlewares globales.</td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/package-lock.json'>package-lock.json</a></b></td>
+						<td>Define las dependencias exactas del proyecto.</td>
+					</tr>
+					<tr>
+						<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/package.json'>package.json</a></b></td>
+						<td>Configuración del proyecto, scripts, dependencias.</td>
+					</tr>
+					</table>
+			</blockquote>
+		</details>
+		<details> 
+				<summary><b>middlewares</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/middlewares/authMiddleware.js'>authMiddleware.js</a></b></td>
+				<td>Middleware para verificar tokens de autenticación (JWT).</td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/Angelitoo777/CocoLuna/blob/master/middlewares/admin.middleware.js'>admin.middleware.js</a></b></td>
+				<td>Middleware para restringir el acceso a rutas solo para administradores.</td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
 <details> <summary><b>controllers</b></summary>
 <blockquote>
 <table>
@@ -251,21 +253,11 @@ Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
 
 Bash
 
-npm start
+npm run dev
 El servidor se ejecutará en el puerto 3000 por defecto. Puedes acceder a los endpoints de la API en http://localhost:3000.
 
-🧪 Pruebas
-Para ejecutar las pruebas del proyecto, utiliza el siguiente comando:
 
-Bash
 
-npm test
-📌 Hoja de Ruta
-[X] Task 1: Implementar la lógica inicial del core de la API.
-
-[ ] Task 2: Agregar autenticación con JWT para las rutas de usuario.
-
-[ ] Task 3: Implementar los servicios de RabbitMQ para las notificaciones y el inventario.
 
 🔰 Contribuciones
 ¡Tu ayuda es bienvenida! Si quieres contribuir, puedes hacerlo de las siguientes maneras:
