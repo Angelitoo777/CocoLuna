@@ -1,73 +1,71 @@
 <p align="center">
-<img src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/100/external-markdown-a-lightweight-markup-language-with-plain-text-formatting-syntax-logo-duo-tal-revivo.png" align="center" width="30%">
+    <img src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/100/external-markdown-a-lightweight-markup-language-with-plain-text-formatting-syntax-logo-duo-tal-revivo.png" align="center" width="30%">
 </p>
 <p align="center"><h1 align="center">COCOLUNA</h1></p>
 <p align="center">
-<em><code>❯ Una API escalable para la gestión de productos y usuarios.</code></em>
+	<em><code>❯ Una API escalable para la gestión de productos y usuarios.</code></em>
 </p>
 <p align="center">
-</p>
+	</p>
 <p align="center">Construido con las siguientes tecnologías:</p>
 <p align="center">
-<a href="https://skillicons.dev">
-<img src="https://skillicons.dev/icons?i=express,md,redis,sequelize,nodejs">
-</a></p>
+	<a href="https://skillicons.dev">
+		<img src="https://skillicons.dev/icons?i=express,md,redis,sequelize,nodejs">
+	</a></p>
 <br>
 
-🔗 Tabla de Contenidos
-📍 Visión General
+## 🔗 Tabla de Contenidos
 
-👾 Características
+- [📍 Visión General](#-visión-general)
+- [👾 Características](#-características)
+- [📁 Estructura del Proyecto](#-estructura-del-proyecto)
+  - [📂 Índice del Proyecto](#-índice-del-proyecto)
+- [🚀 Empezando](#-empezando)
+  - [☑️ Prerrequisitos](#️-prerrequisitos)
+  - [⚙️ Instalación](#️-instalación)
+  - [🤖 Uso](#-uso)
+  - [🧪 Pruebas](#-pruebas)
+- [📌 Hoja de Ruta](#-hoja-de-ruta)
+- [🔰 Contribuciones](#-contribuciones)
+- [🎗 Licencia](#-licencia)
+- [🙌 Agradecimientos](#-agradecimientos)
 
-📁 Estructura del Proyecto
-  - 📂 Índice del Proyecto
+---
 
-🚀 Empezando
-  - ☑️ Prerrequisitos
-  - ⚙️ Instalación
-  - 🤖 Uso
-  - 🧪 Pruebas
+## 📍 Visión General
 
-📌 Hoja de Ruta
-
-🔰 Contribuciones
-
-🎗 Licencia
-
-🙌 Agradecimientos
-
-📍 Visión General
 CocoLuna es una API RESTful robusta y escalable diseñada para gestionar productos, usuarios y procesos de compra. La arquitectura del proyecto está orientada a microservicios, utilizando un sistema de mensajería (RabbitMQ) para desacoplar procesos como la notificación por correo y la gestión de inventario, lo que garantiza una alta disponibilidad y un rendimiento óptimo.
 
-👾 Características
-Autenticación de Usuarios: Sistema de autenticación JWT para proteger las rutas y gestionar los permisos de administrador y usuario.
+---
 
-Gestión de Productos: Endpoints para crear, leer, actualizar y eliminar productos.
+## 👾 Características
 
-Gestión de Inventario: Servicio de consumidor (consumer) que actualiza el stock de productos de manera asíncrona tras una compra.
+* **Autenticación de Usuarios**: Sistema de autenticación JWT para proteger las rutas y gestionar los permisos de administrador y usuario.
+* **Gestión de Productos**: Endpoints para crear, leer, actualizar y eliminar productos.
+* **Gestión de Inventario**: Servicio de consumidor (consumer) que actualiza el stock de productos de manera asíncrona tras una compra.
+* **Notificaciones por Email**: Servicio de consumidor que envía notificaciones por correo electrónico a los usuarios.
+* **Múltiples Bases de Datos**: Integración con ElasticSearch, MongoDB, MySQL y Redis para diferentes tipos de datos (búsquedas, datos no estructurados, datos relacionales y caché).
 
-Notificaciones por Email: Servicio de consumidor que envía notificaciones por correo electrónico a los usuarios.
+---
 
-Múltiples Bases de Datos: Integración con ElasticSearch, MongoDB, MySQL y Redis para diferentes tipos de datos (búsquedas, datos no estructurados, datos relacionales y caché).
+## 📁 Estructura del Proyecto
 
-📁 Estructura del Proyecto
-Bash
-
+```sh
 └── CocoLuna/
-    ├── README.md
-    ├── app.js
-    ├── consumer/             # Manejadores de eventos y consumidores de RabbitMQ
-    ├── controllers/          # Lógica de la API para las rutas
-    ├── db/                   # Configuración y conexión a las diferentes bases de datos
-    ├── middlewares/          # Funciones middleware (autenticación, permisos, etc.)
-    ├── models/               # Definiciones de los modelos de datos (Sequelize y Mongoose)
-    ├── package.json
-    ├── routes/               # Rutas de la API (endpoints)
-    ├── services/             # Lógica de negocio y servicios externos (RabbitMQ, etc.)
-    └── validations/          # Lógica de validación de datos para los endpoints
-    
+    ├── README.md
+    ├── app.js
+    ├── consumer/             # Manejadores de eventos y consumidores de RabbitMQ
+    ├── controllers/          # Lógica de la API para las rutas
+    ├── db/                   # Configuración y conexión a las diferentes bases de datos
+    ├── middlewares/          # Funciones middleware (autenticación, permisos, etc.)
+    ├── models/               # Definiciones de los modelos de datos (Sequelize y Mongoose)
+    ├── package.json
+    ├── routes/               # Rutas de la API (endpoints)
+    ├── services/             # Lógica de negocio y servicios externos (RabbitMQ, etc.)
+    └── validations/          # Lógica de validación de datos para los endpoints
+    
+```
 📂 Índice del Proyecto
-
 <details open>
 <summary><b><code>COCOLUNA/</code></b></summary>
 <details> <summary><b>root</b></summary>
@@ -178,7 +176,7 @@ Bash
 <td>Lógica de negocio para el registro de usuarios y notificación.</td>
 </tr>
 </table>
-<blockquote>
+</blockquote>
 </details>
 <details> <summary><b>validations</b></summary>
 <blockquote>
@@ -237,7 +235,7 @@ Clona el repositorio:
 
 Bash
 
-git clone https://github.com/Angelitoo777/CocoLuna
+git clone [https://github.com/Angelitoo777/CocoLuna](https://github.com/Angelitoo777/CocoLuna)
 Navega al directorio del proyecto:
 
 Bash
@@ -287,7 +285,7 @@ Clona el Repositorio: Clona tu fork a tu máquina local.
 
 Bash
 
-git clone https://github.com/Angelitoo777/CocoLuna
+git clone [https://github.com/Angelitoo777/CocoLuna](https://github.com/Angelitoo777/CocoLuna)
 Crea una Nueva Rama: Trabaja siempre en una nueva rama con un nombre descriptivo.
 
 Bash
@@ -325,8 +323,8 @@ Revisión: Una vez que tu PR sea revisado y aprobado, se fusionará con la rama 
 Este proyecto está protegido bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
 
 🙌 Agradecimientos
-Skill Icons: por la generación de los iconos de tecnologías.
+Skill Icons - por la generación de los iconos de tecnologías.
 
-Readme.so: por la plantilla inicial del README.
+Readme.so - por la plantilla inicial del README.
 
-RabbitMQ: por el sistema de mensajería que hace posible la escalabilidad del proyecto.
+RabbitMQ - por el sistema de mensajería que hace posible la escalabilidad del proyecto.
