@@ -85,6 +85,7 @@ CocoLuna es una API RESTful robusta y escalable diseñada para gestionar product
         ├── order.validation.js
         ├── product.validation.js
         └── user.validation.js
+```
 📂 Project Index
 <details open>
 <summary><b><code>COCOLUNA/</code></b></summary>
