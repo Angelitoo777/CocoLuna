@@ -221,102 +221,70 @@ CocoLuna es una API RESTful robusta y escalable diseñada para gestionar product
 </blockquote>
 </details>
 </details>
+	
+---
 
-🚀 Empezando
-☑️ Prerrequisitos
+## 🚀 Empezando
+
+### ☑️ Prerrequisitos
+
 Asegúrate de tener instalados los siguientes componentes:
 
-Node.js: Versión 18.x o superior.
+- **Node.js:** Versión 18.x o superior.
 
-npm: Gestor de paquetes de Node.js (viene incluido con la instalación de Node.js).
+- **npm:** Gestor de paquetes de Node.js (viene incluido con la instalación de Node.js).
 
-Docker (Opcional): Para levantar las bases de datos y RabbitMQ de forma sencilla.
+- **Docker (Opcional):** Para levantar las bases de datos y RabbitMQ de forma sencilla.
 
-⚙️ Instalación
-Clona el repositorio:
+### ⚙️ Instalación
 
-Bash
+Instale CocoLuna utilizando uno de los siguientes métodos:
 
-git clone [https://github.com/Angelitoo777/CocoLuna](https://github.com/Angelitoo777/CocoLuna)
-Navega al directorio del proyecto:
+**Construir desde la fuente:**
 
-Bash
+1. Clonar el repositorio CocoLuna:
+```sh
+❯ git clone https://github.com/Angelitoo777/CocoLuna
+```
 
-cd CocoLuna
-Instala las dependencias del proyecto:
+2. Navegue hasta el directorio del proyecto:
+```sh
+❯ cd CocoLuna
+```
 
-Bash
-
-npm install
-🤖 Uso
-Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
-
-Bash
-
-npm run dev
-El servidor se ejecutará en el puerto 3000 por defecto. Puedes acceder a los endpoints de la API en http://localhost:3000.
+3. Instalar las dependencias del proyecto:
 
 
+**Usando `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ npm install
+```
 
 
-🔰 Contribuciones
-¡Tu ayuda es bienvenida! Si quieres contribuir, puedes hacerlo de las siguientes maneras:
 
-💬 Participa en las Discusiones: Comparte ideas, da feedback o haz preguntas.
 
-🐛 Reporta Errores: Envía bugs encontrados o solicita nuevas funcionalidades.
+### 🤖 Uso
+Ejecute CocoLuna usando el siguiente comando:
+**Usando `npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
 
-💡 Envía Pull Requests: Revisa los PRs abiertos y envía los tuyos.
+```sh
+❯ npm run dev
+```
 
-<details closed>
-<summary>Guía de Contribución</summary>
+---
 
-Haz un Fork: Primero, haz un fork del repositorio a tu cuenta de GitHub.
 
-Clona el Repositorio: Clona tu fork a tu máquina local.
-
-Bash
-
-git clone [https://github.com/Angelitoo777/CocoLuna](https://github.com/Angelitoo777/CocoLuna)
-Crea una Nueva Rama: Trabaja siempre en una nueva rama con un nombre descriptivo.
-
-Bash
-
-git checkout -b nueva-funcionalidad-x
-Haz tus Cambios: Desarrolla y prueba tus cambios localmente.
-
-Haz el Commit: Confirma tus cambios con un mensaje claro y conciso.
-
-Bash
-
-git commit -m 'Implementada nueva funcionalidad X.'
-Sube los Cambios: Sube los cambios a tu repositorio forkeado.
-
-Bash
-
-git push origin nueva-funcionalidad-x
-Crea un Pull Request: Crea un PR contra el repositorio original. Describe claramente los cambios que has hecho.
-
-Revisión: Una vez que tu PR sea revisado y aprobado, se fusionará con la rama principal. ¡Gracias por tu contribución!
-
-</details>
-
-<details closed>
-<summary>Gráfico de Contribuidores</summary>
-<br>
-<p align="left">
-<a href="https://github.com{/Angelitoo777/CocoLuna/}graphs/contributors">
-<img src="https://contrib.rocks/image?repo=Angelitoo777/CocoLuna">
-</a>
-</p>
-</details>
-
-🎗 Licencia
+## 🎗 Licencia
 Este proyecto está protegido bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
 
-🙌 Agradecimientos
+---
+
+## 🙌 Agradecimientos
 Skill Icons - por la generación de los iconos de tecnologías.
 
 Readme.so - por la plantilla inicial del README.
 
 RabbitMQ - por el sistema de mensajería que hace posible la escalabilidad del proyecto.
+
+---
